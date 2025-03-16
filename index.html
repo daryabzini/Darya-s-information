@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darya's Contact Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #4b4b4b;
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgb(29, 29, 29);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;#964B00
+        }
+        h1 {
+            color: #4b007e;
+        }
+        p {
+            font-size: 18px;
+            color: #afafaf;
+        }
+        .contact-info {
+            margin-top: 20px;
+            display: none; /* Initially hidden */
+        }
+        .contact-info a {
+            color: #9900ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .social-media {
+            margin-top: 20px;
+            display: none; /* Initially hidden */
+        }
+        .social-media a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #9900ff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+            border: 3px solid #9900ff;
+        }
+        .show-btn {
+            background: #54008c;
+            color: #afafaf;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .show-btn:hover {
+            transform: scale(1.1);
+        }
+        .show-btn:active {
+            animation: bounce 0.3s ease-in-out;
+        }
+        @keyframes bounce {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <img src="myphoto2.html" alt="profile-pic" class="profile-pic">
+        <p>Hello! I'm Eng Darya, feel free to contact me.</p>
+
+        <button class="show-btn" id="showButton" onclick="showInfo()">Click on me</underline></button>
+
+        <div class="contact-info" id="infoBox">
+            <p><strong>Phone:</strong> <a href="tel:009647510489248">+9647510489248</a></p>
+            <p>Whatsapp, Viber, and Telegram</p>
+            <p><strong>Phone:</strong> <a href="tel:009647754963003">+9647754963003</a></p>
+            <p>Whatsapp and Telegram</p>
+            <p><strong>Email:</strong> <a href="mailto:daryafathulla@gmail.com">daryafathulla@gmail.com</a></p>
+        </div>
+
+        <div class="social-media" id="socialBox">
+            <a href="https://snapchat.com/t/mkEbenzj" target="_blank">Snapchat</a>
+            <a href="https://www.facebook.com/share/1BxSgghSpP/?mibextid=wwXIfr" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/dr2.26?igsh=MXRieXptc3hwMXRzYQ%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+        </div>
+    </div>
+
+    <script>
+        function showInfo() {
+            let infoBox = document.getElementById("infoBox");
+            let socialBox = document.getElementById("socialBox");
+            let button = document.getElementById("showButton");
+
+            // Hide the button
+            button.style.display = "none";
+
+            // Show the contact and social media sections with animation
+            infoBox.style.display = "block";
+            socialBox.style.display = "block";
+
+            infoBox.animate([
+                { opacity: 0, transform: "translateY(-20px)" },
+                { opacity: 1, transform: "translateY(0)" }
+            ], {
+                duration: 500,
+                easing: "ease-out"
+            });
+
+            socialBox.animate([
+                { opacity: 0, transform: "translateY(-20px)" },
+                { opacity: 1, transform: "translateY(0)" }
+            ], {
+                duration: 500,
+                easing: "ease-out"
+            });
+        }
+    </script>
+</body>
+</html>
